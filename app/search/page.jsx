@@ -1,15 +1,12 @@
+import Product from "@/components/product"
 import fetchsearch from "@/lib/fetchsearch"
 
 const Page = async(props) => {
     const {searchParams}= await props
     const query = await searchParams
     const q= query.q
-    try {
-   const results = await fetchsearch(q)
-      
-    } catch (error) {
-      
-    }
+
+     const results = await fetchsearch(q) 
   return (
     <div>
       <div className="p-10">
@@ -21,9 +18,8 @@ const Page = async(props) => {
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {
             results?.content?.results?.map(product=>{
-              console.log(product)
               return <li className="" key={product.general.product_id}>
-                {product.general.title}
+                <Product product={product}/>
               </li>
             })
           }

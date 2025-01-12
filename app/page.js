@@ -3,7 +3,7 @@ import GridOption from "@/components/gridOption";
 export default function Home() {
   return (
      <main className="">
-        {/* <div className="grid grid-cols-1 grid-flow-row-dense md:grid-cols-4  gap-6">
+      <div className="grid grid-cols-1 grid-flow-row-dense md:grid-cols-4  gap-6">
           <GridOption
           title='Sweet Gifts For Less Than $20'
           image='https://links.papareact.com/1dy'
@@ -34,7 +34,7 @@ export default function Home() {
           className='bg-pink-200 h-full md:h-32'
           
           />
-        </div>  */}
+        </div>
      </main>
   );
 }
