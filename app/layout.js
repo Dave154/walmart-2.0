@@ -17,15 +17,18 @@ export const metadata = {
   description: "My Walmart clone",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, modal}) {
   return (
     <html lang="en">
       <body
         className=''
       >
             <Header/>
-          
+        <div className="flex"> 
+        {modal}
         {children}
+        </div>
+        
       </body>
     </html>
   );

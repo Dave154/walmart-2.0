@@ -15,6 +15,9 @@ const nextConfig = {
             hostname: 'i5.walmartimages.com',
           },
         ],
+        unoptimized: false,
+        minimumCacheTTL: 60, //Cache TTL in seconds
+        deviceSizes: [320, 420, 768, 1024, 1200],
       },
 };
 

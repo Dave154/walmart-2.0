@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "./ui/button"
 import Search from '@/components/search'
+import Basket from "./basket"
 const Header = () => {
     const links = [
         {
@@ -62,13 +63,12 @@ const Header = () => {
                    </Link>
                 })
             }
-            <Link  href={'/basket'}
-                    className="flex items-center text-white font-bold items-center space-x-2"
+            <Link  href={'/checkout'}
+                    className="flex text-white font-bold items-center space-x-2"
                    >
                     <ShoppingCart size={20} />
                     <div>
-                    <p className='text-xs font-extralight'>No Items</p>
-                   <p>$0.00</p> 
+                    <Basket />
                     </div>
                    </Link>
            

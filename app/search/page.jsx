@@ -5,7 +5,6 @@ const Page = async(props) => {
     const {searchParams}= await props
     const query = await searchParams
     const q= query.q
-
      const results = await fetchsearch(q) 
   return (
     <div>
@@ -17,8 +16,8 @@ const Page = async(props) => {
 
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {
-            results?.content?.results?.map(product=>{
-              return <li className="" key={product.general.product_id}>
+            results?.content?.results?.map((product,i)=>{
+              return <li className="" key={product.general.product_id + ' ' + i}>
                 <Product product={product}/>
               </li>
             })
