@@ -13,7 +13,7 @@ const Basket = () => {
     <div>
         <p className='text-xs font-extralight'>
             {
-                cart.length > 0 ? `${cart.length} items`:'No Items'
+                cart.length > 0 ? `${cart.length} item${cart.length === 1 ? '' :'s'}`:'No Items'
             }
         </p>
         <p>{total}</p> 

@@ -9,7 +9,7 @@ const Loading = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {
             Array(8).fill('').map((item,index) => {
-                return <Skeleton key={index} className='w-[300px] h-[400px] rounded-xl' />
+                return <Skeleton key={index} className='w-[300px] h-[350px] md:w-[350px] md:h-[400px] rounded-xl' />
             })
         }
       </div>

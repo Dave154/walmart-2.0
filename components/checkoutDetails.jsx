@@ -26,14 +26,14 @@ const CheckoutDetails = () => {
     
     console.log(Object.keys(grouped))
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-6xl mx-auto ">
         <ul className="space-y-5 divide-y-2">
         {
             Object.keys(grouped).map((key,index)=>{
                 const item = grouped[key][0]
                 const total = getCartTotal(grouped[key])
 
-                return <li className="p-5 my-2 flex items-center justify-between" key={key}>
+                return <li className="md:p-5 my-2 flex items-center justify-between  gap-4" key={key}>
                       {
                         item.general.main_image && 
                         <Image
@@ -43,14 +43,14 @@ const CheckoutDetails = () => {
                           height={100}
                         />
                       }  
-                      <div className="flex space-x-4 pl-4">
+                      <div className="flex ">
                         <div className="">
-                            <p className="line-clamp font-bold ">{item.general.title}</p>
+                            <p className="md:line-clamp line-clamp-2 font-bold ">{item.general.title}</p>
                             <div 
                                 dangerouslySetInnerHTML={{__html:item.general.description}}
                             className="line-clamp-1 font-light text-sm mt-2"/>
                         </div>
-                        <div className="flex flex-col rouded-md p-5">
+                        <div className="flex flex-col rouded-md ">
                             <AddToCart product={item} />
                             <p className="font-bold text-right mt-4">{total}</p>
                         </div>

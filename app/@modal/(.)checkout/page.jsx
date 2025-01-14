@@ -15,15 +15,13 @@ const Page = () => {
   return (
     <Dialog open
     onOpenChange={(open=>!open && router.back())}
+    className='p-3'
     >
-
-
-      
-      <DialogContent className='h-4/5 w-full overflow-scroll max-w-3xl bg-white'>
+      <DialogContent className='h-4/5 w-full overflow-scroll max-w-3xl bg-white '>
         <DialogHeader>
           <DialogTitle>Checkout</DialogTitle>
           <DialogDescription>
-            <p className="">Basket COntent</p>
+            <p className="">Basket Content</p>
           </DialogDescription>
         </DialogHeader>
         <CheckoutDetails />
