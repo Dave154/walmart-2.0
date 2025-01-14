@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Walmart 2.0
+![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js)  
+![Zustand](https://img.shields.io/badge/Zustand-blue?style=for-the-badge)  
+![ShadCN](https://img.shields.io/badge/ShadCN-gray?style=for-the-badge)  
+![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-blue?style=for-the-badge&logo=tailwindcss)  
+![Oxylabs](https://img.shields.io/badge/Oxylabs-EE5B24?style=for-the-badge&logoColor=white)  
+![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)  
+
+
+Walmart 2.0 is a clone of Walmart's e-commerce platform, designed as a modern web application that leverages Oxylabs for data scraping. While it replicates key features for browsing and exploring products, **payment functionality is not included**.
+
+
+## Tech Stack
+
+- **Next.js**: Enables server-side rendering and efficient routing.
+- **Zustand**: Handles state management for the application.
+- **ShadCN**: Provides a library of highly customizable UI components.
+- **Tailwind CSS**: Used for creating responsive and utility-first designs.
+- **Oxylabs**: Powers the data scraping process for fetching Walmart data.
+
+## Live Demo
+
+Check out the live demo: [Walmart 2.0 on Vercel](https://walmart-2-0-rosy.vercel.app/)  
+
+## Environment Variables
+
+The project requires a `.env.local` file for environment variables. Add the following variables to configure Oxylabs:
+
+```env
+OXYLABS_USERNAME=
+OXYLABS_PASSWORD=
+```
+
+Replace the placeholders with your Oxylabs credentials.
+
+## Features
+
+- **Data Scraping**: Fetches product data from Walmart using Oxylabs.
+- **Modern UI**: Built with ShadCN and styled with Tailwind CSS for a seamless user experience.
+- **Responsive Design**: Fully responsive layout for desktop and mobile devices.
+- **State Management**: Zustand handles global state efficiently.
+- **No Payment Integration**: This project focuses on showcasing the product catalog and user interface, excluding payment functionality.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js (v16 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Dave154/walmart-2.0.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd walmart-2.0
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Create a `.env.local` file in the root directory and add your Oxylabs credentials:
+
+   ```env
+   OXYLABS_USERNAME=your_username
+   OXYLABS_PASSWORD=your_password
+   ```
+
+### Development
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app will be available at [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Deployment on Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Push your project to a GitHub repository.
+2. Connect the repository to your Vercel account.
+3. Add the environment variables (`OXYLABS_USERNAME` and `OXYLABS_PASSWORD`) in the **Vercel Dashboard** under the project’s Environment Variables section.
+4. Deploy your project.
 
-## Learn More
+## Contributing
 
-To learn more about Next.js, take a look at the following resources:
+Contributions are welcome! Submit issues or pull requests to improve the project.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
