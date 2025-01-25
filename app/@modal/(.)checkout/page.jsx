@@ -21,7 +21,7 @@ const Page = () => {
         <DialogHeader>
           <DialogTitle>Checkout</DialogTitle>
           <DialogDescription>
-            <p className="">Basket Content</p>
+            <p className="">My Basket</p>
           </DialogDescription>
         </DialogHeader>
         <CheckoutDetails />
